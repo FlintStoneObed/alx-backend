@@ -19,6 +19,7 @@ FILES
 KEY CONCEPTS
 
 Pagination: Dividing a large dataset into smaller, manageable pages.
+
 Hypermedia Pagination: Adding navigational controls (e.g., next page, previous page) to the paginated data for easier access.
 
 Deletion-Resilient Pagination: Ensuring that pagination remains consistent even when data is removed from the dataset.
@@ -36,16 +37,23 @@ USAGE
 Basic Pagination:
 
 Retrieve a specific page of data by providing the page number and page size.
+
 Example: get_page(page=2, page_size=20)
+
 Hypermedia Pagination:
 
 Retrieve paginated data with additional navigation controls, including next_page and prev_page.
+
 Example: get_hyper(page=2, page_size=20)
+
 Deletion-Resilient Pagination:
 
 Handle cases where data may be deleted between queries without causing the user to miss items from the dataset.
+
 Example: get_hyper_index(index=10, page_size=10)
+
 Running the Code
+
 To run any of the Python files, simply execute the script from the command line. For example:
 
 _$ python3 0-simple_pagination.py_
@@ -53,4 +61,5 @@ _$ python3 0-simple_pagination.py_
 Ensure that the required CSV file is in the same directory as the scripts.
 
 TESTING
+
 All functions and methods include type annotations and thorough documentation. You can test the length of files using wc and verify the correctness of the code using Python’s unittest module.
